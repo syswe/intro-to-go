@@ -46,8 +46,23 @@ func main() {
 	fmt.Println("-------------------------------")
 
 	entry := 74
+	// %d is for decimal
+	// %b is for binary
+	// %o is for octal
+	// %x is for hexadecimal
+	// %v is for any value
+	// %T is for type
+	// %t is for boolean
+	// %s is for string
+	// %q is for quoted string
+	// %f is for float
+	// %e is for scientific notation
+	// %E is for scientific notation
+	// %c is for character
+	// %p is for pointer
+	fmt.Printf("%d ==  %v\n", entry, entry)
+	fmt.Printf("%d type is %T\n", entry, entry)
 	fmt.Printf("%d in binary is %b\n", entry, entry)
 	fmt.Printf("%d in octal is %o\n", entry, entry)
 	fmt.Printf("%d in hexadecimal is %x\n", entry, entry)
-
 }
