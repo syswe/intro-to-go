@@ -1,44 +1,28 @@
 package main
 
-// pointers
+import "fmt"
+
 func main() {
-	// pointers
-	var a int = 42
-	var b *int = &a
-	println(a, b)
-	println(a, *b)
-	a = 27
-	println(a, *b)
-	*b = 14
-	println(a, *b)
+	// Declare a variable
+	var num int = 10
 
-	// new
-	var c *int = new(int)
-	println(c)
-	*c = 10
-	println(*c)
+	// Declare a pointer variable
+	var ptr *int
 
-	// make
-	var d *[]int = new([]int)
-	println(d)
-	*d = make([]int, 10, 100)
-	println(d)
-	println(len(*d), cap(*d))
+	// Assign the address of num to the pointer variable
+	ptr = &num
 
-	// pointers
-	var e []int = make([]int, 10, 100)
-	println(e)
-	println(len(e), cap(e))
+	// Print the value and address of num
+	fmt.Println("Value of num:", num)
+	fmt.Println("Address of num:", &num)
 
-	var f *[]int = &e
-	println(f)
-	println(len(*f), cap(*f))
+	// Print the value and address stored in the pointer variable
+	fmt.Println("Value stored in ptr:", *ptr)
+	fmt.Println("Address stored in ptr:", ptr)
 
-	// pointers
-	var g map[string]int = make(map[string]int)
-	println(g)
+	// Change the value of num using the pointer variable
+	*ptr = 20
 
-	var h *map[string]int = &g
-	println(h)
-
+	// Print the updated value of num
+	fmt.Println("Updated value of num:", num)
 }
